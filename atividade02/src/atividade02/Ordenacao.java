@@ -122,24 +122,26 @@ public class Ordenacao implements Ordenacao_IF {
 	    
 	}
 	 private static void merge(int[] numeros, int[] esquerda, int[] direita) {
-	        int i = 0, j = 0, k = 0;
+    int i = 0, j = 0, k = 0;
 
-	        while (i < esquerda.length && j < direita.length) {
-	            if (esquerda[i] <= direita[j]) {
-	                numeros[k++] = esquerda[i++];
-	            } else {
-	                numeros[k++] = esquerda[j++];
-	            }
-	        }
-
-	        while (i < esquerda.length) {
-	            numeros[k++] = esquerda[i++];
-	        }
-
-	        while (j < direita.length) {
-	            numeros[k++] = direita[j++];
-	        }
+  	  while (i < esquerda.length && j < direita.length) {
+      	 	 if (esquerda[i] <= direita[j]) {
+      	     		 numeros[k++] = esquerda[i++];
+  	      } else {
+          	  numeros[k++] = direita[j++];
+       	 }
 	    }
+
+    
+   		 while (i < esquerda.length) {
+ 		       numeros[k++] = esquerda[i++];
+ 	   }
+
+  		  while (j < direita.length) {
+ 		       numeros[k++] = direita[j++];
+    }
+}
+
 
 
 	@Override
