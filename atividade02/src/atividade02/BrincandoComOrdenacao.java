@@ -3,22 +3,22 @@ import java.util.Arrays;
 
 public class BrincandoComOrdenacao {
 	
-	 public static long calcularTempoMedio_bubbleSort(Ordenacao_IF x,int[] numeros) {
-	        int numExecucoes = 50;
-	        long tempoTotal = 0;
+	 public static long calcularTempoMedio_bubbleSort(Ordenacao_IF x, int[] numeros) {
+	    int numExecucoes = 50;
+	    long tempoTotal = 0;
+	   
+	    for (int i = 0; i < numExecucoes; i++) {
+	        int[] numerosClone = Arrays.copyOf(numeros, numeros.length);
+	        
 	       
-              
-	        for (int i = 0; i < numExecucoes; i++) {
-	        	int[] numerosClone = Arrays.copyOf(numeros, numeros.length);
-	            
-	          if(  x.checaVetorOrdenado(numerosClone)==true) {
-	        	  tempoTotal+=x.bubbleSort(numerosClone);
-	          }
-	          
-	        }
+	            tempoTotal += x.bubbleSort(numerosClone);
+	      
+	    }
+	    
+	    long tempoMedio = tempoTotal / numExecucoes;
+	    return tempoMedio;
+	}
 
-	        return tempoTotal / numExecucoes; 	   
-	        }
 	 
 	
 	 
@@ -31,9 +31,9 @@ public class BrincandoComOrdenacao {
 	        for (int i = 0; i < numExecucoes; i++) {
 	        	int[] numerosClone = Arrays.copyOf(numeros, numeros.length);
 	            
-	          if(  x.checaVetorOrdenado(numerosClone)==true) {
+	         
 	        	  tempoTotal+=x.countingSort(numerosClone);
-	          }
+	          
 	          
 	        }
 
@@ -47,9 +47,9 @@ public class BrincandoComOrdenacao {
 	        for (int i = 0; i < numExecucoes; i++) {
 	        	int[] numerosClone = Arrays.copyOf(numeros, numeros.length);
 	            
-	          if(  x.checaVetorOrdenado(numerosClone)==true) {
+	          
 	        	  tempoTotal+=x.insertionSort(numerosClone);
-	          }
+	          
 	          
 	        }
 
@@ -63,9 +63,8 @@ public class BrincandoComOrdenacao {
 	        for (int i = 0; i < numExecucoes; i++) {
 	        	int[] numerosClone = Arrays.copyOf(numeros, numeros.length);
 	            
-	          if(  x.checaVetorOrdenado(numerosClone)==true) {
 	        	  tempoTotal+=x.mergeSort(numerosClone);
-	          }
+	          
 	          
 	        }
 
@@ -79,9 +78,8 @@ public class BrincandoComOrdenacao {
 	        for (int i = 0; i < numExecucoes; i++) {
 	        	int[] numerosClone = Arrays.copyOf(numeros, numeros.length);
 	            
-	          if(  x.checaVetorOrdenado(numerosClone)==true) {
 	        	  tempoTotal+=x.quickSort(numerosClone);
-	          }
+	          
 	          
 	        }
 
@@ -95,9 +93,8 @@ public class BrincandoComOrdenacao {
 	        for (int i = 0; i < numExecucoes; i++) {
 	        	int[] numerosClone = Arrays.copyOf(numeros, numeros.length);
 	            
-	          if(  x.checaVetorOrdenado(numerosClone)==true) {
 	        	  tempoTotal+=x.quickSort_Java(numerosClone);
-	          }
+	         
 	          
 	        }
 
@@ -111,9 +108,8 @@ public class BrincandoComOrdenacao {
 	        for (int i = 0; i < numExecucoes; i++) {
 	        	int[] numerosClone = Arrays.copyOf(numeros, numeros.length);
 	            
-	          if(  x.checaVetorOrdenado(numerosClone)==true) {
 	        	  tempoTotal+=x.random_quickSort(numerosClone);
-	          }
+	          
 	          
 	        }
 
@@ -127,16 +123,14 @@ public class BrincandoComOrdenacao {
 	        for (int i = 0; i < numExecucoes; i++) {
 	        	int[] numerosClone = Arrays.copyOf(numeros, numeros.length);
 	            
-	          if(  x.checaVetorOrdenado(numerosClone)==true) {
+	          
 	        	  tempoTotal+=x.selectionSort(numerosClone);
-	          }
+	          
 	          
 	        }
 
 	        return tempoTotal / numExecucoes; 	   
 	        }
-	 
-	 
 	 
 	 
 
