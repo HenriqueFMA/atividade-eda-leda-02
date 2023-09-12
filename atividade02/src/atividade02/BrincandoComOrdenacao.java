@@ -151,7 +151,7 @@ public class BrincandoComOrdenacao {
 		
 		
 		
-		long tempoBubbleSort5k_Aleatorio = calcularTempoMedio_bubbleSort(x, vetor5k_Aleatorio);
+	    long tempoBubbleSort5k_Aleatorio = calcularTempoMedio_bubbleSort(x, vetor5k_Aleatorio);
 	    long tempoBubbleSort5k_Crescente = calcularTempoMedio_bubbleSort(x, vetor5k_Crescente);
 	    long tempoBubbleSort5k_Decrescente = calcularTempoMedio_bubbleSort(x, vetor5k_Decrescente);
 
